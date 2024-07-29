@@ -45,7 +45,6 @@
     </el-skeleton>
 </template>
 <script setup>
-import { defineProps } from 'vue';
 import { getCurrentInstance } from 'vue'; 
     const props = defineProps( {
         playList: Array,

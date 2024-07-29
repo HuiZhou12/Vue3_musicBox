@@ -63,7 +63,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
 import store  from '@/store/index';
 import { computed, ref } from 'vue';
 const props = defineProps({
