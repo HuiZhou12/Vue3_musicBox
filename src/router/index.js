@@ -3,9 +3,10 @@ import {createRouter, createWebHistory} from 'vue-router';
 //全部路由
 const routes = [
     { path:'/', redirect: '/index' },
-    { path: '/index', name:'index', component: () => import('../views/index/index.vue')},
-    { path: '/playlist', name:'playlist', component: () => import('../views/playlist/index.vue')},
-    { path: '/playlist/detail', name: 'playListDetail', component: () => import('../views/playlist/detail.vue')}
+    { path: '/index', name:'index', component: () => import('../views/index/index.vue'), meta:{title: 'Home | Musicbox'} },
+    { path: '/playlist', name:'playlist', component: () => import('../views/playlist/index.vue'), meta:{title: 'Playlist | Musicbox'}},
+    { path: '/playlist/detail', name: 'playListDetail', component: () => import('../views/playlist/detail.vue')},
+    { path: '/rank', name: 'rank', meta: {title: 'Rank | Musicbox'} }
 ];
 
 

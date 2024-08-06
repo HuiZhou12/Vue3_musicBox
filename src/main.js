@@ -17,9 +17,14 @@ app.config.globalProperties.$msg = ElMessage;
 app.config.globalProperties.$utils = utils; 
 
 //全局启用相关功能
-app.use(router).use(ElementPlus).use(createPinia()).mount('#app');
+app.use(router).use(ElementPlus).use(createPinia()).use(router).mount('#app');
 
-
+//动态网站名
+router.beforeEach((to, from, next) => { // 在每次路由变化之前执行 to 标识即将进入目标路由对象 from 标识当前导航正要离开的路由对象
+    document.title = to.meta.title || 'Vue3 | Musicbox';
+    next(); // 
+  });
+  
 //启动！vip检查器
 const accountInfo = store.accountInfoStore();
 if(accountInfo.isLogin === true){
