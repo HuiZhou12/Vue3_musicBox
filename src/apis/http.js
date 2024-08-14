@@ -146,8 +146,8 @@ const lyrics = ({ id = '' }) => { return api.get(`/lyric?id=${id}`, {}) }
 //获取vip信息：
 const getVip = () => {return api.get('/vip/info')}
 
-//获取歌曲的url
-const getSong = (id = '') => { return api.post(`/song/url?id=${id}`, {}) }
+//获取歌曲的url ， 高音质
+const getSong = (id = '') => { return api.post(`/song/url?id=${id}&level=jymaster`, {}) }
 export {
     getQRkey,
     createQR,

@@ -6,7 +6,7 @@ import store from '../store/index';
 
 const instance = axios.create({  //新建一个axious实例， 该对象内为配置项
     timeout: 1000 * 60, //指定请求超时的时间，单位为毫秒
-    baseURL:'https://api.trtst.com', //网易云的借口地址
+    baseURL:'https://api.trtst.com', //网易云的借口地址https://api.trtst.com
     withCredentials: true, // 表示进行跨域请求时是否携带凭证信息（cookit、HTTP认证及客户端SSL证明等）
 
     validateStatus: function(states) { //可以自定义抛出的HTTP code 

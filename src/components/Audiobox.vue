@@ -31,13 +31,13 @@ export default {
         watchEffect(async () => {
             const $myAudio = myAudio.value;
             if ($myAudio) {
-                $myAudio.currentTime = 0;
                 $myAudio.pause(); // 切歌时暂停当前音频
                 
             }
             try {
             const { data: res } = await proxy.$http.getSong(playListInfoStore.playList[playListInfoStore.playIndex].id);
             curSongInfo.value = res.data[0]; // 更新当前歌曲信息
+            $myAudio.play(); // 继续播放当前音乐
             } catch (error) {
             console.error('出错啦:', error);
             }
